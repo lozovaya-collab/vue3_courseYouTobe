@@ -1,20 +1,26 @@
 <template>
-    <div class="post">
+  <div>
+    <div class="post" v-for="post in posts" :key="post">
       <div><strong>Название:</strong> {{ post.title }}</div>
       <div><strong>Описание:</strong> {{ post.body }}</div>
     </div>
+  </div>
 </template>
 
 <script>
-    export default {
-        
-    }
+export default {
+  props: {
+    posts: {
+      type: Array,
+      requierd: true,
+    },
+  },
+};
 </script>
 
-<style lang="scss" scoped>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+<style scoped>
+.post {
+  border: 2px solid teal;
+  margin: 15px auto 0px auto;
 }
 </style>

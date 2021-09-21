@@ -1,31 +1,29 @@
 <template>
-    <form @submit.prevent>
-      <h4>Создание поста</h4>
-      <input
-        v-bind:value="title"
-        @input="title = $event.target.value"
-        class="input"
-        type="text"
-        placeholder="Название"
-      />
-      <input
-        v-bind:value="body"
-        @input="body = $event.target.value"
-        class="input"
-        type="text"
-        placeholder="Описание"
-      />
-      <button class="btn" @click="createPost">Создать</button>
-    </form>
+  <form @submit.prevent>
+    <h4>Создание поста</h4>
+    <input
+      v-bind:value="title"
+      @input="title = $event.target.value"
+      class="input"
+      type="text"
+      placeholder="Название"
+    />
+    <input
+      v-bind:value="body"
+      @input="body = $event.target.value"
+      class="input"
+      type="text"
+      placeholder="Описание"
+    />
+    <button class="btn">Создать</button>
+  </form>
 </template>
 
 <script>
-    export default {
-        
-    }
+export default {};
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 form {
   display: flex;
   flex-direction: column;
